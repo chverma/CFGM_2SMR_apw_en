@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+:root {
+    --mobils-color: #3ddc84;
+    --mobils-image: url('/mobils.jpg');
+    --web-color: #4285f4;
+    --web-image: url('/web.jpg');
+    --programacio-color: #4a148c;
+    --programacio-image: url('/programacio.jpg');
+}
+
+body {
+    margin: 0;
+    background-color: #455a64;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2em;
+    padding: 3em 1em 1em 1em;
+    margin: auto;
+    max-width: 400px;
+    transition: max-width .5s;
+}
+
+.card {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-bottom: 5px solid;
+    border-radius: 2%;
+    height: 200px;
+}
+
+.card h1 {
+    text-align: center;
+    font-size: 1.6em;
+    padding: 0.3em;
+}
+
+.card img {
+    width: 100%;
+    max-height: 40%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card.mobils{
+    background-color: var(--mobils-color);
+    border-color: var(--mobils-color);
+}
+
+.card.web{
+    background-color: var(--web-color);
+    border-color: var(--web-color);
+}
+
+.card.programacio{
+    background-color: var(--programacio-color);
+    border-color: var(--programacio-color);
+}
+
+@media(min-width: 768px){
+    .cards {
+        grid-template-columns: 1fr 1fr 1fr; 
+        max-width: 700px;
+    }
+
+    .card {
+        height: 250px;
+    }
+}
+
+@media(min-width: 1024px){
+    .cards {
+        max-width: 900px;
+    }
+}
+
+@media(min-width: 1240px){
+    .cards {
+        max-width: 1024px;
+    }
+}
+
+</style>
+</head>
+
+<div class="cards">
+    <!--a href="/dam-m8">
+        <div class="card mobils">
+            <h1>DAM-M8-Aplicacions mòbils</h1>
+            <img src="mobils.jpg">
+        </div>
+    </a-->
+    <!--a href="/dam-m3">
+        <div class="card programacio">
+            <h1>DAM-M3-Programació</h1>
+            <img src="programacio.jpg">
+        </div>
+    </a-->
+    <a href="/CFGM_2smr_aw_en">
+        <div class="card web">
+            <h1>CFGM_2SMR_aw_en</h1>
+            <img src="web.jpg">
+        </div>
+    </a>
+</div>
